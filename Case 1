@@ -1,0 +1,1 @@
+def isEven(value: int): return True if str(bin(value))[-1] == '0' else False
