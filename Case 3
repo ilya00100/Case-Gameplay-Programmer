@@ -1,0 +1,19 @@
+from datetime import datetime
+import time
+
+start_time = datetime.now()
+def sort_(array):
+    for run in range(len(array)-1):
+        for i in range(len(array)-1-run):
+            if array[i]>array[i+1]:
+                array[i], array[i+1] = array[i+1], array[i]
+    return array
+print (sort_([30, 10, -5, 123456]))
+time.sleep(5)
+print(datetime.now() - start_time)
+
+start_time = datetime.now()
+def sort(array): return sorted(array)
+print (sort([30, 10, -5, 123456]))
+time.sleep(5)
+print(datetime.now() - start_time)
